@@ -32,6 +32,7 @@ Official PyTorch implementation of **SwinSparseCLMoE**, a highly accurate and pa
 ### Installation
 ```bash
 pip install torch monai nibabel medpy wandb
+```
 
 ## 🚀 Training
 
