@@ -39,7 +39,7 @@ pip install torch monai nibabel medpy wandb
 ### For Train
 ```bash
 python train.py --brats-version 21 --data-dir /path/to/BraTS2021 --batch-size 4 --expert-count 4 --top-k 2
-
+```
 
 ## 📥 Pretrained Weights
 
