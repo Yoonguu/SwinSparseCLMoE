@@ -32,3 +32,9 @@ Official PyTorch implementation of **SwinSparseCLMoE**, a highly accurate and pa
 ### Installation
 ```bash
 pip install torch monai nibabel medpy wandb
+
+## 🚀 Training
+
+### For Train
+```bash
+python train.py --brats-version 21 --data-dir /path/to/BraTS2021 --batch-size 4 --expert-count 4 --top-k 2
