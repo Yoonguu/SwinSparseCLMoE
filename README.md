@@ -38,3 +38,18 @@ pip install torch monai nibabel medpy wandb
 ### For Train
 ```bash
 python train.py --brats-version 21 --data-dir /path/to/BraTS2021 --batch-size 4 --expert-count 4 --top-k 2
+
+
+## 📥 Pretrained Weights
+
+> 📌 **Note:** Pretrained model weights for BraTS 2021 and BraTS 2024 will be released on Hugging Face upon the paper's official acceptance.
+
+<!-- 
+```python
+# Weights download example (Will be activated upon paper acceptance)
+from huggingface_hub import hf_hub_download
+
+checkpoint_path = hf_hub_download(
+    repo_id="Yoonguu/SwinSparseCLMoE", 
+    filename="SwinSparseCLMoE_BraTS21_best.pt"
+)
