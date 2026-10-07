@@ -37,7 +37,7 @@ Ensure you have Python 3.10+ installed. Install the required dependencies, inclu
 ```bash
 pip install torch torchvision
 pip install monai nibabel medpy wandb fvcore
-'''
+```
 
 ### 2. Dataset Preparation & Split Identifiers
 Download the BraTS 2021 and BraTS 2024 Adult Glioma (BraTS-GLI) datasets.
@@ -64,7 +64,7 @@ python TrainVT_wPatch_wWT_wnpys_4.py \
     --base-channel 24 \
     --seed 42 \
     --gpu-num 0
-
+```
 
 ### 4. Evaluation & Inference
 The training script automatically performs sliding-window inference on the test set after the best model is saved. However, to manually evaluate a saved checkpoint and calculate detailed region-wise (WT, TC, ET) metrics (Dice, HD95) and save prediction .nii.gz masks:
@@ -75,7 +75,7 @@ python TrainVT_wPatch_wWT_wnpys_4.py \
     --data-dir /path/to/BraTS2024/BraTS-GLI \
     --resume /path/to/checkpoint/best_by_mean_dice.pt \
     --save-predictions
-
+```
 
 
 ### 5. Computational Efficiency Benchmarking
@@ -85,4 +85,4 @@ To strictly reproduce the exact conditions used for our efficiency measurements 
 # This script dynamically loads the model architectures without weights and 
 # profiles the operational efficiency using a standard 1x4x128x128x128 AMP input.
 python measure_efficiency_all.py
-
+```
