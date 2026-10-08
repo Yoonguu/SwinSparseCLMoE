@@ -39,17 +39,15 @@ pip install torch torchvision
 pip install monai nibabel medpy wandb fvcore
 ```
 
+
 ### 2. Dataset Preparation & Split Identifiers
-Download the BraTS 2021 and BraTS 2024 Adult Glioma (BraTS-GLI) datasets.
-To guarantee the exact same data distribution used in our experiments, we provide the fixed 8:1:1 patient-level split identifiers (Train/Val/Test).
+Download the BraTS 2021 and BraTS 2024 Adult Glioma (BraTS-GLI) datasets. 
+To guarantee the exact same data distribution used in our experiments, we provide the fixed `8:1:1` patient-level split identifiers (Train/Val/Test).
 
-BraTS Label Conversion: Our preprocessing pipeline automatically handles the BraTS label conversion from [0, 1, 2, 4] to [0, 1, 2, 3] during data loading.
-
-Split Identifiers: Please check the splits/ directory for the exact list of case IDs used for training, validation, and testing:
-
-splits/brats21_splits.json
-
-splits/brats24_splits.json
+* **BraTS Label Conversion:** Our preprocessing pipeline automatically handles the BraTS label conversion from `[0, 1, 2, 4]` to `[0, 1, 2, 3]` during data loading.
+* **Split Identifiers:** Please check the `splits/` directory for the exact list of pure case IDs (e.g., `BraTS2021_00343`) used for training, validation, and testing:
+  * **BraTS 2021:** `splits/brats21_train.txt`, `splits/brats21_val.txt`, `splits/brats21_test.txt`
+  * **BraTS 2024:** `splits/brats24_train.txt`, `splits/brats24_val.txt`, `splits/brats24_test.txt`
 
 ### 3. Training
 To reproduce the training process with our fixed random seed (seed=42) and specific MoE hyperparameters (Base channel=24, Top-$k$=2, $N$=4):
