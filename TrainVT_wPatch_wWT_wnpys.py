@@ -475,21 +475,11 @@ def get_default_data_dir(dataset_version='24'):
 
     # BraTS 2024
     if dataset_version == '24':
-        if 'bmis' in hostname: return '/home/bmis1/DATA2/YG/Dataset/Brain/BRATS2024/BraTS-GLI'
-        if 'gm-a6000' in hostname: return '/home/gmadmin/DATA2/Song/Dataset/Brain/BRATS/BraTS2024/BraTS-GLI'
-        if 'supermoon' in hostname: return '/home/leebr/Desktop/YG/Dataset/Brain/BRATS2024/BraTS-GLI'
-        if 'mega' in hostname: return '/home/mega/Desktop/Data1/Dataset/Brain/BRATS2024/BraTS-GLI'
-        return 'E:\\Brain\\BRATS2024\\BraTS-GLI'
+        return 'Directory to BraTS24'
 
     # BraTS 2021
     elif dataset_version == '21':
-        if 'bmis' in hostname: return '/home/bmis1/DATA2/YG/Dataset/Brain/BraTS2021/TrainingData'
-        if 'gm-a6000' in hostname: return '/home/gmadmin/DATA2/Song/Dataset/Brain/BRATS/BraTS2021/TrainingData'
-        if 'supermoon' in hostname: return '/home/leebr/Desktop/YG/Dataset/Brain/BraTS2021/TrainingData'
-        if 'mega' in hostname: return '/home/mega/Desktop/Data1/Dataset/Brain/BraTS2021/TrainingData'
-
-        # 사용자가 지정한 로컬 경로
-        return 'E:\\Brain\\BraTS2021\\TrainingData'
+        return 'Directory to BraTS21'
 
     # 기본값
     return 'E:\\Brain\\BRATS2024\\BraTS-GLI'
